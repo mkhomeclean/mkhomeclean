@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MK HOME CLEAN</title>
   
-  <!-- Fontes modernas e elegantes -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Work+Sans&display=swap" rel="stylesheet" />
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      /* Paleta de cores equilibrada e moderna */
       --azul-escuro: #22356F;
       --azul-medio: #3B5BA7;
       --azul-claro: #A9C1FF;
@@ -29,7 +28,7 @@
 
     body {
       margin: 0;
-      font-family: 'Work Sans', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: var(--cinza-claro);
       color: var(--azul-escuro);
       line-height: 1.6;
@@ -40,24 +39,27 @@
     }
 
     header {
-      background: linear-gradient(90deg, var(--azul-escuro), var(--azul-medio));
-      padding: 28px 24px;
-      text-align: center;
       position: sticky;
       top: 0;
       z-index: 100;
+      padding: 28px 24px;
+      text-align: center;
+      color: var(--branco);
+      background-image: linear-gradient(rgba(34, 53, 111, 0.75), rgba(34, 53, 111, 0.75)),
+                        url('imagens/limpeza4.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       box-shadow: 0 3px 12px rgba(34, 53, 111, 0.4);
       border-bottom: 4px solid var(--coral-suave);
     }
 
     header h1 {
-      margin: 0;
-      font-family: 'Roboto Slab', serif;
-      font-weight: 400;
+      font-weight: 600;
       font-size: 3rem;
-      color: var(--branco);
+      margin: 0;
       letter-spacing: 2px;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
       user-select: none;
     }
 
@@ -70,7 +72,6 @@
     }
 
     nav a {
-      font-family: 'Work Sans', sans-serif;
       font-weight: 400;
       font-size: 1.2rem;
       color: var(--cinza-claro);
@@ -123,7 +124,6 @@
     }
 
     h2 {
-      font-family: 'Roboto Slab', serif;
       font-weight: 400;
       font-size: 2.6rem;
       margin-bottom: 26px;
@@ -258,40 +258,38 @@
       <p>Use o menu acima para navegar pelas diferentes secções do site.</p>
     </section>
 
-     <section id="servicos">
-  <h2>Serviços</h2>
-  <p>Oferecemos serviços personalizados de limpeza ao domicílio, com atenção ao detalhe e pontualidade.</p>
+    <section id="servicos">
+      <h2>Serviços</h2>
+      <p>Oferecemos serviços personalizados de limpeza ao domicílio, com atenção ao detalhe e pontualidade.</p>
 
-  <ul>
-    <li>🧽 Limpeza geral (diária, semanal ou quinzenal)</li>
-    <li>🏠 Limpeza profunda de casas inteiras</li>
-    <li>🛁 Limpeza de casas de banho e cozinhas</li>
-    <li>🪟 Limpeza de vidros e janelas</li>
-    <li>🧼 Serviços pós-obra ou mudança</li>
-    <li>🧴 Desinfeção e higienização</li>
-    <li>🧹 Limpezas personalizadas por pedido</li>
-  </ul>
+      <ul>
+        <li>🧽 Limpeza geral (diária, semanal ou quinzenal)</li>
+        <li>🏠 Limpeza profunda de casas inteiras</li>
+        <li>🛁 Limpeza de casas de banho e cozinhas</li>
+        <li>🪟 Limpeza de vidros e janelas</li>
+        <li>🧼 Serviços pós-obra ou mudança</li>
+        <li>🧴 Desinfeção e higienização</li>
+        <li>🧹 Limpezas personalizadas por pedido</li>
+      </ul>
 
-  <div style="margin-top: 40px;">
-    <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: var(--azul-medio);">Galeria de Limpezas</h3>
-    
-    <div class="carrossel">
-      <div class="slides">
-        <img src="https://via.placeholder.com/800x400?text=Antes+da+limpeza" alt="Antes da limpeza" />
-        <img src="https://via.placeholder.com/800x400?text=Depois+da+limpeza" alt="Depois da limpeza" />
-        <img src="https://via.placeholder.com/800x400?text=Cozinha+limpa" alt="Cozinha limpa" />
+      <div style="margin-top: 40px;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: var(--azul-medio);">Galeria de Limpezas</h3>
+        
+        <div class="carrossel" style="overflow: hidden; max-width: 100%; position: relative;">
+          <div class="slides" style="display: flex; transition: transform 0.5s ease;">
+            <img src="https://via.placeholder.com/800x400?text=Antes+da+limpeza" alt="Antes da limpeza" style="width: 100%; max-width: 800px; border-radius: 12px;"/>
+            <img src="https://via.placeholder.com/800x400?text=Depois+da+limpeza" alt="Depois da limpeza" style="width: 100%; max-width: 800px; border-radius: 12px;"/>
+            <img src="https://via.placeholder.com/800x400?text=Cozinha+limpa" alt="Cozinha limpa" style="width: 100%; max-width: 800px; border-radius: 12px;"/>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
+    </section>
 
     <section id="contactos">
       <h2>Contactos</h2>
-      <p>📞 965 131 535 / 910 843 403<br/>
-         📧 <a href="mailto:info@mkamoravida.pt" style="color: var(--azul-medio); text-decoration: none;">info@mkamoravida.pt</a><br/>
-         📍 <a class="morada-link" href="https://www.google.com/maps/dir/?api=1&destination=Rua+da+Républica+40,+Lisboa,+Portugal" target="_blank" rel="noopener">Rua da Républica 40, 2º andar 2670-469 Loures, Portugal</a>
+      <p>📞 <a href="tel:+351965131535" style="color: var(--azul-medio); font-weight: 600; text-decoration: underline;">965 131 535</a> / <a href="tel:+351910843403" style="color: var(--azul-medio); font-weight: 600; text-decoration: underline;">910 843 403</a><br/>
+         📧 <a href="mailto:info@mkamoravida.pt" style="color: var(--azul-medio); font-weight: 600; text-decoration: underline;">info@mkamoravida.pt</a><br/>
+         📍 <a class="morada-link" href="https://www.google.com/maps/dir/?api=1&destination=Rua+da+Républica+40,+Lisboa,+Portugal" target="_blank" rel="noopener" style="color: var(--azul-escuro); font-weight: 600; text-decoration: underline;">Rua da Républica 40, 2º andar 2670-469 Loures, Portugal</a>
       </p>
     </section>
 
@@ -317,3 +315,5 @@
 
 </body>
 </html>
+
+
