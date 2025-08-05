@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MK HOME CLEAN</title>
+  
+  <!-- Fontes modernas e elegantes -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Work+Sans&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      /* Paleta de cores equilibrada e moderna */
+      --azul-escuro: #22356F;
+      --azul-medio: #3B5BA7;
+      --azul-claro: #A9C1FF;
+      --coral-suave: #F28C82;
+      --verde-suave: #7EB77F;
+      --roxo-suave: #9B8DCB;
+      --cinza-claro: #F7F9FC;
+      --cinza-medio: #CED4DA;
+      --cinza-escuro: #6C757D;
+      --branco: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Work Sans', sans-serif;
+      background-color: var(--cinza-claro);
+      color: var(--azul-escuro);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--azul-escuro), var(--azul-medio));
+      padding: 28px 24px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 3px 12px rgba(34, 53, 111, 0.4);
+      border-bottom: 4px solid var(--coral-suave);
+    }
+
+    header h1 {
+      margin: 0;
+      font-family: 'Roboto Slab', serif;
+      font-weight: 400;
+      font-size: 3rem;
+      color: var(--branco);
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      user-select: none;
+    }
+
+    nav {
+      margin-top: 22px;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: var(--cinza-claro);
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 8px;
+      transition: background-color 0.35s ease, color 0.35s ease;
+      user-select: none;
+      border: 2px solid transparent;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: var(--coral-suave);
+      color: var(--azul-escuro);
+      outline-offset: 3px;
+      outline: 2px solid var(--azul-escuro);
+      border-color: var(--azul-escuro);
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 40px 20px 60px;
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    section {
+      display: none;
+      background-color: var(--branco);
+      padding: 42px 36px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(34, 53, 111, 0.1);
+      transition: opacity 0.6s ease, transform 0.4s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    section:target {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    body:not(:has(:target)) #inicio {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-family: 'Roboto Slab', serif;
+      font-weight: 400;
+      font-size: 2.6rem;
+      margin-bottom: 26px;
+      color: var(--azul-escuro);
+      letter-spacing: 0.04em;
+      user-select: none;
+      border-left: 6px solid var(--roxo-suave);
+      padding-left: 14px;
+      box-shadow: 2px 0 var(--roxo-suave);
+    }
+
+    p {
+      font-size: 1.18rem;
+      color: var(--azul-escuro);
+      margin-bottom: 22px;
+      line-height: 1.55;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 14px;
+    }
+
+    ul li {
+      margin-bottom: 18px;
+    }
+
+    ul li a {
+      font-weight: 400;
+      font-size: 1.15rem;
+      color: var(--azul-medio);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      user-select: none;
+      display: inline-block;
+    }
+
+    ul li a:hover,
+    ul li a:focus {
+      color: var(--verde-suave);
+      border-bottom-color: var(--verde-suave);
+      background-color: rgba(126, 183, 127, 0.18);
+      outline: none;
+    }
+
+    /* Link morada */
+    #contactos a.morada-link {
+      font-weight: 400;
+      color: var(--azul-escuro);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+      padding-bottom: 4px;
+      display: inline-block;
+      user-select: text;
+    }
+
+    #contactos a.morada-link:hover,
+    #contactos a.morada-link:focus {
+      color: var(--coral-suave);
+      border-bottom-color: var(--coral-suave);
+      outline: none;
+      background-color: rgba(242, 140, 130, 0.15);
+    }
+
+    footer {
+      background-color: var(--azul-medio);
+      text-align: center;
+      padding: 24px;
+      font-size: 14px;
+      color: var(--cinza-claro);
+      box-shadow: 0 -4px 15px rgba(34, 53, 111, 0.3);
+      margin-top: auto;
+      font-weight: 400;
+      letter-spacing: 0.6px;
+      user-select: none;
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      nav a {
+        margin: 0 10px;
+        font-size: 1rem;
+        padding: 6px 12px;
+      }
+      main {
+        padding: 30px 16px 50px;
+      }
+      section {
+        padding: 32px 24px;
+        margin: 0 10px;
+      }
+      h2 {
+        font-size: 2rem;
+        padding-left: 12px;
+        border-left-width: 4px;
+      }
+      p, ul li a {
+        font-size: 1rem;
+      }
+      ul li {
+        margin-bottom: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MK HOME CLEAN</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contactos">Contactos</a>
+      <a href="#marcacoes">Marcações</a>
+      <a href="#avaliar">Avaliar</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>Bem-vindo à MK HOME CLEAN</h2>
+      <p>Somos especialistas em limpezas ao domicílio com qualidade, confiança e dedicação.</p>
+      <p>Use o menu acima para navegar pelas diferentes secções do site.</p>
+    </section>
+
+     <section id="servicos">
+  <h2>Serviços</h2>
+  <p>Oferecemos serviços personalizados de limpeza ao domicílio, com atenção ao detalhe e pontualidade.</p>
+
+  <ul>
+    <li>🧽 Limpeza geral (diária, semanal ou quinzenal)</li>
+    <li>🏠 Limpeza profunda de casas inteiras</li>
+    <li>🛁 Limpeza de casas de banho e cozinhas</li>
+    <li>🪟 Limpeza de vidros e janelas</li>
+    <li>🧼 Serviços pós-obra ou mudança</li>
+    <li>🧴 Desinfeção e higienização</li>
+    <li>🧹 Limpezas personalizadas por pedido</li>
+  </ul>
+
+  <div style="margin-top: 40px;">
+    <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: var(--azul-medio);">Galeria de Limpezas</h3>
+    
+    <div class="carrossel">
+      <div class="slides">
+        <img src="https://via.placeholder.com/800x400?text=Antes+da+limpeza" alt="Antes da limpeza" />
+        <img src="https://via.placeholder.com/800x400?text=Depois+da+limpeza" alt="Depois da limpeza" />
+        <img src="https://via.placeholder.com/800x400?text=Cozinha+limpa" alt="Cozinha limpa" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <section id="contactos">
+      <h2>Contactos</h2>
+      <p>📞 965 131 535 / 910 843 403<br/>
+         📧 <a href="mailto:info@mkamoravida.pt" style="color: var(--azul-medio); text-decoration: none;">info@mkamoravida.pt</a><br/>
+         📍 <a class="morada-link" href="https://www.google.com/maps/dir/?api=1&destination=Rua+da+Républica+40,+Lisboa,+Portugal" target="_blank" rel="noopener">Rua da Républica 40, 2º andar 2670-469 Loures, Portugal</a>
+      </p>
+    </section>
+
+    <section id="marcacoes">
+      <h2>Marcações</h2>
+      <p>Para efetuar uma marcação <strong>aqui</strong>:</p>
+      <ul>
+        <li><a href="mailto:info@mkamoravida.pt">Enviar email</a></li>
+        <li><a href="https://wa.me/965131535" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="tel:+351910843403">Chamada</a></li>
+      </ul>
+    </section>
+
+    <section id="avaliar">
+      <h2>Avaliar</h2>
+      <p>Já usou os nossos serviços? Deixe a sua opinião e ajude-nos a melhorar!</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 MK HOME CLEAN. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
