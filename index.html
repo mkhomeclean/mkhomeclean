@@ -4,22 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MK HOME CLEAN</title>
-  
-  <!-- Fonte Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Fonte Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --azul-escuro: #22356F;
-      --azul-medio: #3B5BA7;
-      --azul-claro: #A9C1FF;
-      --coral-suave: #F28C82;
-      --verde-suave: #7EB77F;
-      --roxo-suave: #9B8DCB;
-      --cinza-claro: #F7F9FC;
-      --cinza-medio: #CED4DA;
-      --cinza-escuro: #6C757D;
+      /* Paleta de cores fresca e vibrante */
+      --lilas: #D6C7F7;
+      --verde-agua: #B7EDEB;
+      --amarelo: #FFF6A3;
       --branco: #FFFFFF;
+      --azul-claro: #CDE7FF;
+      --texto-escuro: #2A3D66;
+      --links-escuros: #1A2A44; /* Cor escura para links */
+      --links-hover: #FFC107; /* Amarelo para hover */
     }
 
     * {
@@ -28,38 +27,34 @@
 
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--cinza-claro);
-      color: var(--azul-escuro);
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--branco);
+      color: var(--texto-escuro);
       line-height: 1.6;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       scroll-behavior: smooth;
+      font-weight: 300;
     }
 
     header {
+      background: var(--verde-agua);
+      padding: 28px 24px;
+      text-align: center;
       position: sticky;
       top: 0;
       z-index: 100;
-      padding: 28px 24px;
-      text-align: center;
-      color: var(--branco);
-      background-image: linear-gradient(rgba(34, 53, 111, 0.75), rgba(34, 53, 111, 0.75)),
-                        url('imagens/limpeza4.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      box-shadow: 0 3px 12px rgba(34, 53, 111, 0.4);
-      border-bottom: 4px solid var(--coral-suave);
+      box-shadow: 0 3px 12px rgba(45, 44, 66, 0.4);
+      border-bottom: 4px solid var(--amarelo);
     }
 
     header h1 {
-      font-weight: 600;
-      font-size: 3rem;
       margin: 0;
+      font-weight: 300;
+      font-size: 3rem;
+      color: var(--texto-escuro);
       letter-spacing: 2px;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
       user-select: none;
     }
 
@@ -72,9 +67,9 @@
     }
 
     nav a {
-      font-weight: 400;
+      font-weight: 300;
       font-size: 1.2rem;
-      color: var(--cinza-claro);
+      color: var(--texto-escuro);
       text-decoration: none;
       padding: 8px 18px;
       border-radius: 8px;
@@ -85,11 +80,11 @@
 
     nav a:hover,
     nav a:focus {
-      background-color: var(--coral-suave);
-      color: var(--azul-escuro);
+      background-color: var(--lilas);
+      color: var(--verde-agua);
       outline-offset: 3px;
-      outline: 2px solid var(--azul-escuro);
-      border-color: var(--azul-escuro);
+      outline: 2px solid var(--texto-escuro);
+      border-color: var(--texto-escuro);
     }
 
     main {
@@ -105,7 +100,7 @@
       background-color: var(--branco);
       padding: 42px 36px;
       border-radius: 14px;
-      box-shadow: 0 10px 25px rgba(34, 53, 111, 0.1);
+      box-shadow: 0 10px 25px rgba(45, 44, 66, 0.1);
       transition: opacity 0.6s ease, transform 0.4s ease;
       opacity: 0;
       transform: translateY(20px);
@@ -124,22 +119,23 @@
     }
 
     h2 {
-      font-weight: 400;
+      font-weight: 300;
       font-size: 2.6rem;
       margin-bottom: 26px;
-      color: var(--azul-escuro);
+      color: var(--texto-escuro);
       letter-spacing: 0.04em;
       user-select: none;
-      border-left: 6px solid var(--roxo-suave);
+      border-left: 6px solid var(--lilas);
       padding-left: 14px;
-      box-shadow: 2px 0 var(--roxo-suave);
+      box-shadow: 2px 0 var(--lilas);
     }
 
     p {
       font-size: 1.18rem;
-      color: var(--azul-escuro);
+      color: var(--texto-escuro);
       margin-bottom: 22px;
       line-height: 1.55;
+      font-weight: 300;
     }
 
     ul {
@@ -150,59 +146,53 @@
 
     ul li {
       margin-bottom: 18px;
-    }
-
-    ul li a {
-      font-weight: 400;
       font-size: 1.15rem;
-      color: var(--azul-medio);
-      text-decoration: none;
-      border-bottom: 2px solid transparent;
-      padding-bottom: 4px;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-      user-select: none;
-      display: inline-block;
+      font-weight: 300;
     }
 
-    ul li a:hover,
-    ul li a:focus {
-      color: var(--verde-suave);
-      border-bottom-color: var(--verde-suave);
-      background-color: rgba(126, 183, 127, 0.18);
+    /* Estilo para links de email, telefone e morada para destaque */
+    a.link-destaque {
+      color: var(--links-escuros);
+      text-decoration: underline;
+      font-weight: 400;
+      transition: color 0.3s ease;
+    }
+
+    a.link-destaque:hover,
+    a.link-destaque:focus {
+      color: var(--links-hover);
       outline: none;
+      cursor: pointer;
     }
 
     /* Link morada */
     #contactos a.morada-link {
+      color: var(--links-escuros);
+      text-decoration: underline;
       font-weight: 400;
-      color: var(--azul-escuro);
-      text-decoration: none;
-      border-bottom: 2px solid transparent;
-      transition: all 0.3s ease;
-      border-radius: 6px;
-      padding-bottom: 4px;
-      display: inline-block;
+      transition: color 0.3s ease;
+      padding-bottom: 2px;
       user-select: text;
+      display: inline-block;
     }
 
     #contactos a.morada-link:hover,
     #contactos a.morada-link:focus {
-      color: var(--coral-suave);
-      border-bottom-color: var(--coral-suave);
+      color: var(--links-hover);
+      background-color: transparent;
       outline: none;
-      background-color: rgba(242, 140, 130, 0.15);
+      cursor: pointer;
     }
 
     footer {
-      background-color: var(--azul-medio);
+      background-color: var(--azul-claro);
       text-align: center;
       padding: 24px;
       font-size: 14px;
-      color: var(--cinza-claro);
-      box-shadow: 0 -4px 15px rgba(34, 53, 111, 0.3);
+      color: var(--texto-escuro);
+      box-shadow: 0 -4px 15px rgba(45, 44, 66, 0.3);
       margin-top: auto;
-      font-weight: 400;
+      font-weight: 300;
       letter-spacing: 0.6px;
       user-select: none;
     }
@@ -236,6 +226,14 @@
         margin-bottom: 14px;
       }
     }
+   #floatingTextarea {
+  height: 150px;   /* Altura maior */
+  width: 100%;     /* Ocupa toda a largura do container pai */
+  resize: vertical; /* Permite redimensionar só na vertical */
+  box-sizing: border-box; /* Para o padding e border não alargarem além do width */
+}
+
+
   </style>
 </head>
 <body>
@@ -249,6 +247,7 @@
       <a href="#marcacoes">Marcações</a>
       <a href="#avaliar">Avaliar</a>
     </nav>
+    
   </header>
 
   <main>
@@ -272,24 +271,15 @@
         <li>🧹 Limpezas personalizadas por pedido</li>
       </ul>
 
-      <div style="margin-top: 40px;">
-        <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: var(--azul-medio);">Galeria de Limpezas</h3>
-        
-        <div class="carrossel" style="overflow: hidden; max-width: 100%; position: relative;">
-          <div class="slides" style="display: flex; transition: transform 0.5s ease;">
-            <img src="https://via.placeholder.com/800x400?text=Antes+da+limpeza" alt="Antes da limpeza" style="width: 100%; max-width: 800px; border-radius: 12px;"/>
-            <img src="https://via.placeholder.com/800x400?text=Depois+da+limpeza" alt="Depois da limpeza" style="width: 100%; max-width: 800px; border-radius: 12px;"/>
-            <img src="https://via.placeholder.com/800x400?text=Cozinha+limpa" alt="Cozinha limpa" style="width: 100%; max-width: 800px; border-radius: 12px;"/>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section id="contactos">
       <h2>Contactos</h2>
-      <p>📞 <a href="tel:+351965131535" style="color: var(--azul-medio); font-weight: 600; text-decoration: underline;">965 131 535</a> / <a href="tel:+351910843403" style="color: var(--azul-medio); font-weight: 600; text-decoration: underline;">910 843 403</a><br/>
-         📧 <a href="mailto:info@mkamoravida.pt" style="color: var(--azul-medio); font-weight: 600; text-decoration: underline;">info@mkamoravida.pt</a><br/>
-         📍 <a class="morada-link" href="https://www.google.com/maps/dir/?api=1&destination=Rua+da+Républica+40,+Lisboa,+Portugal" target="_blank" rel="noopener" style="color: var(--azul-escuro); font-weight: 600; text-decoration: underline;">Rua da Républica 40, 2º andar 2670-469 Loures, Portugal</a>
+      <p>📞 
+        <a href="tel:+351965131535" class="link-destaque">965 131 535</a> / 
+        <a href="tel:+351910843403" class="link-destaque">910 843 403</a><br/>
+         📧 <a href="mailto:info@mkamoravida.pt" class="link-destaque">info@mkamoravida.pt</a><br/>
+         📍 <a class="morada-link" href="https://www.google.com/maps/dir/?api=1&destination=Rua+da+Républica+40,+Lisboa,+Portugal" target="_blank" rel="noopener">Rua da Républica 40, 2º andar 2670-469 Loures, Portugal</a>
       </p>
     </section>
 
@@ -297,15 +287,20 @@
       <h2>Marcações</h2>
       <p>Para efetuar uma marcação <strong>aqui</strong>:</p>
       <ul>
-        <li><a href="mailto:info@mkamoravida.pt">Enviar email</a></li>
-        <li><a href="https://wa.me/965131535" target="_blank" rel="noopener">WhatsApp</a></li>
-        <li><a href="tel:+351910843403">Chamada</a></li>
+        <li><a href="mailto:info@mkamoravida.pt" class="link-destaque">Enviar email</a></li>
+        <li><a href="https://wa.me/965131535" target="_blank" rel="noopener" class="link-destaque">WhatsApp</a></li>
+        <li><a href="tel:+351910843403" class="link-destaque">Chamada</a></li>
       </ul>
     </section>
 
     <section id="avaliar">
       <h2>Avaliar</h2>
       <p>Já usou os nossos serviços? Deixe a sua opinião e ajude-nos a melhorar!</p>
+     <div class="form-floating">
+  <textarea class="form-control" placeholder="Comente aqui" id="floatingTextarea"></textarea>
+  
+</div>
+</div>
     </section>
   </main>
 
@@ -315,5 +310,3 @@
 
 </body>
 </html>
-
-
